@@ -102,6 +102,7 @@ ON Customer.order_id = Feb.orderID
 WHERE length(orderID)=6
 AND orderID<> 'Order ID'
 ;
+
 #14. What was the average quantity of products purchased per account in February?
 SELECT sum(quantity)/count(cust.acctnum)
 FROM BIT_DB.FebSales Feb
@@ -110,6 +111,7 @@ ON FEB.orderid=cust.order_id
 WHERE length(orderid) = 6 
 AND orderid <> 'Order ID'
 ;
+
 #15. Which product brought in the most revenue in January and how much revenue did it bring in total?
 SELECT Product
 , SUM(Price*Quantity)as Revenue 
